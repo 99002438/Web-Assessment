@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+td, th {
+    border: 1px black;
+    text-align: left;
+    padding: 2px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color:white;
+}
+
+input[type=text], input[type=number] {
+    width: 50%;
+    padding: 10px 180px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+input[type=submit]{
+    width: 20%;
+    background-color: grey(138, 53, 53);
+    color:black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+form div.form-action-buttons{
+    text-align: center;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: black;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color:  grey;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}
+</style>
+    <title>
+       User Details
+    </title>
+    
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form>
+                    <div>
+                        <label>Enter your name:</label><label class="validation-error hide" id="nameValidationError"></label>
+                        <input type="text" name="name" id="name">
+                    </div><br>
+                    <div>
+                        <label>Enter your id:</label>
+                        <input type="text" name="userCode" id="userCode">
+                    </div><br>
+                    <div>
+                        <label>Enter your salary:</label>
+                        <input type="text" name="usersalary" id="usersalary">
+                    </div><br>
+                    <div>
+                        <label>Enter the city</label>
+                        <input type="text" name="city" id="city">
+                    </div><br>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div><br>
+                </form>
+            </td>
+           
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
