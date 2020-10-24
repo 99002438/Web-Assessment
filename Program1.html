@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <script src="./Scripts/Common.js"></script>
+    <script src="./Scripts/Classes.js"></script>
+    <script>
+        function store(){
+            alert("Successfully Registered");
+            let name = $("userName").value;
+            let dob = $("dob").value;
+            let gender = $("gender").value;
+            let degree = $("deg").value;
+            let obj = new user(name, dob, gender, degree);
+            let text = `<h1>Name: ${obj.name} </h1><p>DOB: ${obj.dob} </p><p>Gender: ${obj.gender} </p><p>Degree: ${obj.degree} </p>`
+            $("printHere").innerHTML = text;
+
+        }
+    </script>
+</head>
+
+<body>
+    <section>
+        <form align="center">
+            <p> Name: <input type="text" placeholder="Enter the Name" id="userName"></p>    
+            <p> DOB: <input type="date" id="dob" name="dob">
+            <p>
+                Gender: <input type="radio" id="gender" value="Female" name="gender1">Female<input type="radio" id="gender" value="Male" name="gender2">Male
+            </p>        
+            <p>Degree: <select id="deg">
+                <option>UG</option>
+                <option>PG</option>
+            </select></p>
+            <button type="button" onclick=store()>SUBMIT</button>
+        </form>
+    </section>
+    <br>   
+    <div>
+        <p>The entered details:</p>
+        <p id="printHere"></p>
+    </div>
+    </body>
+    </html>
